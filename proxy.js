@@ -5,7 +5,7 @@ const { Converter } = require("opencc-js"); // ⬅️ 注意這裡改用解構�
 require('dotenv').config();
 
 const app = express();
-const port = process.env.PORT || 5000;
+//const port = process.env.PORT || 5000;
 
 
 app.use(cors());
@@ -48,6 +48,8 @@ app.post('/api/translate', async (req, res) => {
   }
 });
 
-app.listen(port, () => {
-  console.log(`✅ Proxy Server is running at http://localhost:${port}`);
-});
+//app.listen(port, () => {
+  //console.log(`✅ Proxy Server is running at http://localhost:${port}`);
+//});
+
+module.exports = app;
